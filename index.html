@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+ <html lang="en">
+  <head>
+     <meta charset="utf-8">
+     <title>Lista de livros</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+     <link rel="stylesheet" href="css/index.css" />
+   </head>
+ 
+   <body>
+     <div class="container">
+       <h2>Minha lista de livros</h2>
+       <div class="input-group">
+  <input placeholder="Adicione um livro" type="text" class="js-novo-livro form-control"> <br>
+<input placeholder="Nome do autor" type="text" class="js-novo-autor form-control"> <br>
+<button @click="addItem" class="js-add btn btn-primary btn-block" type="button">Adicionar!</button>
+<div id="app" class="container">
+   <h2>{{titulo}}</h2>
+<ul>
+    <li v-for="livro in livros">{{livro}}</li>
+</ul>
+   <div class="footer">    
+       <hr/> 
+       <em>Modifique o título da lista:</em>
+       <input v-model="titulo"/>
+   </div>    
+</div>
+   </body>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js"></script>
+
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+   <script type="text/javascript" src="js/index.js"></script>
+ </html>
+
